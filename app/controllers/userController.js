@@ -3,9 +3,9 @@ const shortid = require('shortid');
 const time = require('./../libs/timeLib');
 const response = require('./../libs/responseLib')
 const logger = require('./../libs/loggerLib');
-const validateInput = require('../libs/paramsValidationLib')
+const validateInput = require('./../libs/ParamsValidationLib')
 const check = require('./../libs/checkLib')
-const passwordLib = require('../libs/generatePasswordLib')
+const passwordLib = require('./../libs/generatePasswordLib')
 const token = require('../libs/tokenLib')
 const emailLib = require('../libs/emailLib')
 const crypto = require('crypto')
@@ -13,7 +13,6 @@ var nodemailer = require('nodemailer')
 const appConfig = require('./../../config/appConfig')
 const events = require('events')
 const eventEmitter = new events.EventEmitter();
-
 
 /* Models */
 const AuthModel = mongoose.model('Auth')
