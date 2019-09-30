@@ -3,7 +3,7 @@
  * Module Dependencies
  */
 const mongoose = require('mongoose'),
-Schema = mongoose.Schema;
+  Schema = mongoose.Schema;
 
 let userSchema = new Schema({
   userId: {
@@ -22,11 +22,11 @@ let userSchema = new Schema({
   },
   password: {
     type: String,
-    
+
   },
 
-  confirmPassword:{
-    type:String
+  confirmPassword: {
+    type: String
   },
   email: {
     type: String,
@@ -37,30 +37,33 @@ let userSchema = new Schema({
     type: String,
     default: '91'
   },
-  
+
   mobileNumber: {
-   type: String,
-   default:null
+    type: String,
+    default: null
   },
 
-  createdOn :{
-    type:Date,
-    default:""
+  createdOn: {
+    type: Date,
+    default: ""
   },
 
-  resetPasswordToken :{
-    type:String,
-    default:''
+  resetPasswordToken: {
+    type: String,
+    default: ''
   },
 
-  resetPasswordExpires :{
-    type : Date,
-    default:''
+  resetPasswordExpires: {
+    type: Date,
+    default: ''
   },
 
-  role :{
+  role: {
     type: String,
     default: 'normalUser'
+  },
+  userName: {
+    type: String
   }
 
 

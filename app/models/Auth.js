@@ -4,16 +4,16 @@ const time = require('../libs/timeLib')
 
 const Auth = new Schema({
 
-    userId:{type:String},
-    authToken :{
-        type:String
+    userId: { type: String },
+    authToken: {
+        type: String
     },
-    tokenSecret :{
-        type:String
+    tokenSecret: {
+        type: String
     },
-    tokenGenerationTime :{
-        type:Date,
-        default:time.now()
+    tokenGenerationTime: {
+        type: Date,
+        default: time.now()
     }
 })
 

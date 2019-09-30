@@ -1,5 +1,5 @@
 const mongoose = require('mongoose'),
-Schema = mongoose.Schema;
+  Schema = mongoose.Schema;
 const time = require('../libs/timeLib')
 
 let meetingSchema = new Schema({
@@ -14,18 +14,18 @@ let meetingSchema = new Schema({
     default: ''
   },
   start: {
-    
+
     type: Date,
-    default:Date.now
-  },
-  
-  end: {
-    type:Date,
-    default:Date.now     
+    default: Date.now
   },
 
-  location:{
-    type:String,
+  end: {
+    type: Date,
+    default: Date.now
+  },
+
+  location: {
+    type: String,
     default: ''
   },
 
@@ -34,14 +34,14 @@ let meetingSchema = new Schema({
     default: ''
   },
 
-  createdBy :{
-    type:String,
-    default:""
+  createdBy: {
+    type: String,
+    default: ""
   },
 
-  forUserId :{
-    type:String,
-    default:'',
+  forUserId: {
+    type: String,
+    default: '',
     required: true
   }
 

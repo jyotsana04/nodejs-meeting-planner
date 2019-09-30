@@ -1,7 +1,6 @@
 const bcrypt = require('bcryptjs')
 const saltRounds = 10
 
-/* Custom Library */
 let logger = require('../libs/loggerLib')
 
 let hashpassword = (myPlaintextPassword) => {
