@@ -33,9 +33,6 @@ let signUpFunction = (req, res) => {
                 } else if (req.body.password != req.body.confirmPassword) {
                     let apiResponse = response.generate(true, '"password" and "confirm password" fields do not match"', 400, null)
                     reject(apiResponse)
-                }else if(check.isEmpty(req.body.countryCode)){
-                    let apiResponse = response.generate(true, 'country code is missing', 400, null)
-                    reject(apiResponse)
                 }else if(check.isEmpty(req.body.firstName)){
                     let apiResponse = response.generate(true, 'firstName is missing', 400, null)
                     reject(apiResponse)
@@ -74,7 +71,6 @@ let signUpFunction = (req, res) => {
                             email: req.body.email.toLowerCase(),
                             mobileNumber: req.body.mobileNumber,
                             //role: req.body.role,
-                            countryCode: req.body.countryCode,
                             password: passwordLib.hashpassword(req.body.password),
                             userName: req.body.firstName + "-user",
                             createdOn: time.now()

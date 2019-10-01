@@ -33,11 +33,6 @@ let userSchema = new Schema({
     default: ''
   },
 
-  countryCode: {
-    type: String,
-    default: '91'
-  },
-
   mobileNumber: {
     type: String,
     default: null
