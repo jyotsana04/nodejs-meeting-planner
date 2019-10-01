@@ -33,8 +33,17 @@ let signUpFunction = (req, res) => {
                 } else if (req.body.password != req.body.confirmPassword) {
                     let apiResponse = response.generate(true, '"password" and "confirm password" fields do not match"', 400, null)
                     reject(apiResponse)
-                }else if(check.isEmpty(req.body.countryCode) || check.isEmpty(req.body.firstName)||check.isEmpty(req.body.lastName)||check.isEmpty(req.body.mobileNumber)){
-                    let apiResponse = response.generate(true, 'One or More Parameter(s) is missing', 400, null)
+                }else if(check.isEmpty(req.body.countryCode)){
+                    let apiResponse = response.generate(true, 'country code is missing', 400, null)
+                    reject(apiResponse)
+                }else if(check.isEmpty(req.body.firstName)){
+                    let apiResponse = response.generate(true, 'firstName is missing', 400, null)
+                    reject(apiResponse)
+                }else if(check.isEmpty(req.body.lastName)){
+                    let apiResponse = response.generate(true, 'lastName is missing', 400, null)
+                    reject(apiResponse)
+                }else if(check.isEmpty(req.body.mobileNumber)){
+                    let apiResponse = response.generate(true, 'mobileNumber is missing', 400, null)
                     reject(apiResponse)
                 }
                 else {
