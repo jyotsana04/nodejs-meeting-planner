@@ -55,7 +55,7 @@ let userSchema = new Schema({
 
   role: {
     type: String,
-    default: 'admin'
+    default: 'normalUser'
   },
   userName: {
     type: String
