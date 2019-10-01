@@ -72,7 +72,7 @@ let signUpFunction = (req, res) => {
                             mobileNumber: req.body.mobileNumber,
                             //role: req.body.role,
                             password: passwordLib.hashpassword(req.body.password),
-                            userName: req.body.firstName + "-user",
+                            userName: req.body.firstName + "-admin",
                             createdOn: time.now()
                         })
                         newUser.save((err, newUser) => {
